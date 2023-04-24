@@ -1,0 +1,17 @@
+body {
+    margin: auto;
+    padding: 1em;
+    max-width: 50em;
+}
+
+tw-storydata {
+    display: none;
+}
+
+.code {
+    background-color: lightgray;
+    padding: 0.5em;
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin: 0;
+}

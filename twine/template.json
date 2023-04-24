@@ -1,0 +1,11 @@
+{
+    "name": "YarnTwiner",
+    "version": "latest",
+    "author": "Khan-ali Ibrahim (KXI System)",
+    "description": "The Twine story format that lets you write and export to Yarn!",
+    "image": "",
+    "url": "",
+    "license": "MIT License",
+    "proofing": false,
+    "source": ""
+}
