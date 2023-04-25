@@ -8,9 +8,9 @@ YarnTwiner cannot compile or run Yarn files (yet), if you're looking for somethi
 
 ## Installing
 
-Download the latest release and follow the Twine docs on how to add a [New Story Format](https://twinery.org/cookbook/starting/twine2/storyformat.html#adding-new-story-formats), also make sure to disable editor extensions for Harlow and Sugarcube (mostly Harlow) that would interfere with YarnTwiner.
+Navigate to the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section and download the latest release or import the version URL, follow the Twine docs on how to add a [New Story Format](https://twinery.org/cookbook/starting/twine2/storyformat.html#adding-new-story-formats).
 
-*Adding Story formats from a file is only supported on the Desktop version of Twine, YarnTwiner will be hosted and avaliable to install for the web version soon.*
+Make sure to disable editor extensions for Harlow and Sugarcube (mostly Harlow) that would interfere with YarnTwiner.
 
 ## Features
 
