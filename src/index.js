@@ -2,15 +2,16 @@ import './main.css'
 import * as convert from './convert.js'
 
 window.addEventListener('load', async function() {
-    const TWPassageData = document.querySelectorAll('tw-storydata > tw-passagedata');
-    const NodeData = convert.TWPassagesToNodes(Object.values(TWPassageData));
+    const TWStoryData = document.querySelectorAll('tw-storydata')[0];
+    const TWPassageData = Object.values(document.querySelectorAll('tw-storydata > tw-passagedata'));
+    const NodeData = convert.TWPassagesToNodes(TWPassageData);
     const YarnData = convert.NodesToString(NodeData);
     
     const FileOutput = this.document.querySelector('.code');
-    FileOutput.innerHTML = YarnData;
+    FileOutput.innerText = YarnData;
 
-    this.document.querySelector('.download > button').addEventListener('click', async => {
-        downloadFile(FileOutput.innerText, 'output.yarn');
+    this.document.querySelector('button.download').addEventListener('click', async => {
+        downloadFile(FileOutput.innerText, TWStoryData.attributes.name.value + '.yarn');
     });
 });
 
