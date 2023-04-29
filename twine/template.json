@@ -3,8 +3,8 @@
     "version": "latest",
     "author": "Khan-ali Ibrahim (KXI System)",
     "description": "The Twine story format that lets you write and export to Yarn!",
-    "image": "",
-    "url": "",
+    "image": "https://kxi-system.github.io/YarnTwiner/logo.png",
+    "url": "https://github.com/KXI-System/YarnTwiner",
     "license": "MIT License",
     "proofing": false,
     "source": ""

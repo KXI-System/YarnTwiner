@@ -4,7 +4,7 @@
   "description": "twine story format to write yarn scripts",
   "private": true,
   "scripts": {
-    "test": "npx webpack",
+    "test": "npx webpack && node twine-test.js",
     "build": "npx webpack && node twine-build.js"
   },
   "author": "Khan-ali Ibrahim (KXI System)",

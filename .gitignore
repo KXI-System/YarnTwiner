@@ -124,3 +124,6 @@ out
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# yarntwiner test file
+dist/index-test.html

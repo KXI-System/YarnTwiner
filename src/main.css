@@ -1,11 +1,15 @@
 body {
     margin: auto;
     padding: 1em;
-    max-width: 50em;
+    max-width: 60em;
 }
 
 tw-storydata {
     display: none;
+}
+
+.download {
+    float: right;
 }
 
 .code {
