@@ -9,11 +9,10 @@ YarnTwiner cannot compile or run Yarn files (yet), if you're looking for somethi
 ## Installing
 
 1. Open up a new or existing Twine story and navigate to the "Twine" tab.
-2. Click on `Story Formats > Add` then import the following URL: `https://kxi-system.github.io/YarnTwiner/release/yarntwiner_latest.js`
-   a. You can also import a specific release from the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section.
-3. Select Harlow and then the "Disable Editor Extensions" button on the toolbar at the top.
-4. Go back to your Twine Project, then select the "Twine" tab then `Details` to select YarnTwiner
-5. Write your story then when you're ready to convert into yarn, go to the "Build" tab and hit `Play`!
+2. Click on `Story Formats > Add` then import the following URL: `https://kxi-system.github.io/YarnTwiner/release/yarntwiner_latest.js`. You can also import a specific release from the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section.
+4. Select Harlow and then the "Disable Editor Extensions" button on the toolbar at the top.
+5. Go back to your Twine Project, then select the "Twine" tab then `Details` to select YarnTwiner
+6. Write your story then when you're ready to convert into yarn, go to the "Build" tab and hit `Play`!
 
 For more information on how to add a story format, follow the official Twine docs on [adding New Story Formats](https://twinery.org/cookbook/starting/twine2/storyformat.html#adding-new-story-formats).
 
