@@ -11,15 +11,13 @@
 
 ## Installing
 
-Navigate to the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section and download the version of YarnTwiner you want, the latest web version is hosted at `https://kxi-system.github.io/YarnTwiner/release/yarntwiner_0.1.0.js`.
-
-Alternatively you may also install the lastest and possibly unstable release of YarnTwiner at `https://kxi-system.github.io/YarnTwiner/release/yarntwiner_latest.js`, this version will be based on the latest commits to the main branch of the repo. 
+Navigate to the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section and download the version of YarnTwiner you want, the latest web version is hosted at `https://kxi-system.github.io/YarnTwiner/release/yarntwiner_latest.js`.
 
 More detailed information on how to install a custom story format can be found on the Twine docs on how to add a [New Story Format](https://twinery.org/cookbook/starting/twine2/storyformat.html#adding-new-story-formats).
 
 ## Writing
 
-YarnTwiner main feature is that you can write with Yarn syntax in Twine, if you're unfamiliar with how to write yarn then [read the official YarnSpinner docs](https://docs.yarnspinner.dev/getting-started/writing-in-yarn/lines-nodes-and-options). You just need to know how to write the contents of the Yarn node in a Twine node, everything else you can create with the Twine UI.
+YarnTwiner main feature is that you can write with Yarn syntax in Twine, if you're unfamiliar with how to write yarn then [read the official YarnSpinner docs](https://docs.yarnspinner.dev/getting-started/writing-in-yarn). You just need to know how to write the contents of the Yarn node in a Twine node, everything else you can create with the Twine UI.
 
 ### Node Titles
 
@@ -75,6 +73,8 @@ Tags that begin with the `@` character are reserved for YarnTwiner and control h
 `@comment` - YarnTwiner will add `//` characters at the beginning of every line in the Twine node, or otherwise comment out the Twine node contents in the Yarn file.
 
 `@order:#` - Changes the order of the Yarn nodes as they appear in the exported file based on a number value, by default all nodes have an order value of `0` and exported lowest first (top of the file). `@order:-1` will place the node before all default ordered nodes, and `@order:1` will place the node below.
+
+`@file:<filename>` - Groups nodes together into a single file output based on the given file name, nodes without this tag or with the filename of `main` will be grouped together in a "main" file.
 
 ## Exporting
 

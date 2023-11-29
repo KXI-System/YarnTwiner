@@ -8,9 +8,14 @@ YarnTwiner cannot compile or run Yarn files (yet), if you're looking for somethi
 
 ## Installing
 
-Navigate to the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section and download the latest release or import the version URL, follow the Twine docs on how to add a [New Story Format](https://twinery.org/cookbook/starting/twine2/storyformat.html#adding-new-story-formats).
+1. Open up a new or existing Twine story and navigate to the "Twine" tab.
+2. Click on `Story Formats > Add` then import the following URL: `https://kxi-system.github.io/YarnTwiner/release/yarntwiner_latest.js`
+   a. You can also import a specific release from the [Releases](https://github.com/KXI-System/YarnTwiner/releases) section.
+3. Select Harlow and then the "Disable Editor Extensions" button on the toolbar at the top.
+4. Go back to your Twine Project, then select the "Twine" tab then `Details` to select YarnTwiner
+5. Write your story then when you're ready to convert into yarn, go to the "Build" tab and hit `Play`!
 
-Make sure to disable editor extensions for Harlow and Sugarcube (mostly Harlow) that would interfere with YarnTwiner.
+For more information on how to add a story format, follow the official Twine docs on [adding New Story Formats](https://twinery.org/cookbook/starting/twine2/storyformat.html#adding-new-story-formats).
 
 ## Features
 
