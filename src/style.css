@@ -1,0 +1,9 @@
+body {
+    margin: auto;
+    padding: 1em;
+    max-width: 60em;
+}
+
+tw-storydata {
+    display: none;
+}

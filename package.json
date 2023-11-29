@@ -1,24 +1,29 @@
 {
-  "name": "yarntwiner",
-  "version": "0.1.0",
-  "description": "twine story format to write yarn scripts",
-  "private": true,
-  "scripts": {
-    "test": "npx webpack && node twine-test.js",
-    "build": "npx webpack && node twine-build.js"
-  },
-  "author": "Khan-ali Ibrahim (KXI System)",
-  "license": "MIT",
-  "devDependencies": {
-    "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^5.0.0",
-    "html-inline-css-webpack-plugin": "^1.11.1",
-    "html-inline-script-webpack-plugin": "^3.1.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.7.5",
-    "style-loader": "^3.3.2",
-    "terser-webpack-plugin": "^5.3.7",
-    "webpack": "^5.79.0",
-    "webpack-cli": "^5.0.1"
-  }
+    "name": "yarntwiner",
+    "private": true,
+    "version": "0.2.0",
+    "description": "twine story format to write yarn scripts",
+    "author": "Khan-ali Ibrahim (KXI System)",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-check --tsconfig ./tsconfig.json"
+    },
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^3.0.0",
+        "@tsconfig/svelte": "^5.0.2",
+        "@types/node": "^20.9.4",
+        "svelte": "^4.2.3",
+        "svelte-check": "^3.6.0",
+        "tslib": "^2.6.2",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.0",
+        "vite-plugin-singlefile": "^0.13.5"
+    },
+    "dependencies": {
+        "highlight.js": "^11.9.0"
+    }
 }

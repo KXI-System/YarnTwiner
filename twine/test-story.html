@@ -1,0 +1,120 @@
+<tw-storydata name="YarnTwiner Test Story" startnode="1" creator="Twine" creator-version="2.6.0" format="YarnTwiner" format-version="0.3.0" ifid="E612872B-00CD-4806-866B-5C463952621D" options="" tags="" zoom="1" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="@file:main" color="blue"></tw-tag><tw-tag name="@file:Variables" color="green"></tw-tag><tw-tag name="@file:Ship" color="green"></tw-tag><tw-tag name="@file:Sally" color="green"></tw-tag><tw-passagedata pid="1" name="Start" tags="@file:main" position="900,400" size="100,100">Yarn Spinner is a language for writing conversations in games!
+You can use it to write branching dialogue, and use that in a game engine!
+
+For example, here's a choice between some options!
+
+-&gt; Wow, some options!
+    You got it, pal!
+-&gt; Can I put text inside options?
+    You sure can!
+    For example, here's some lines inside an option.
+    You can even put options inside OTHER options!
+    -&gt; Like this!
+        Wow!
+    -&gt; Or this!
+        Incredible!
+
+// Comments start with two slashes, and won't show up in your conversation.
+// They're good for leaving notes!
+
+You can also write 'commands', which represent things that happen in the game!
+
+In this editor, they'll appear as text:
+
+&lt;&lt;fade_up 1.0&gt;&gt;
+
+-&gt; Nice!
+    Right??
+-&gt; But it didn't actually fade!
+    That's because this page doesn't know about 'fading', or any other feature. 
+    When you're testing your script on this page, we'll just show you your commands as text.
+    In a real game, you can define custom commands that do useful work!
+
+You can also use variables, which store information!
+
+Let's set a variable called "$name".
+
+&lt;&lt;set $name to "Yarn"&gt;&gt;
+
+Done! You can see it appear in the list of variables at the bottom of the screen.
+
+We can use "$name" in lines: My name's {$name}!
+
+-&gt; What can I store in variables?
+    You can store text, numbers, and true/false values!
+-&gt; Where do variables get stored?
+    In this page, we store them in memory. When you use Yarn Spinner in a game engine, like Unity, you can store them in memory, or write custom code that stores them on disk alongside the rest of your saved game!
+
+We can also use 'if' statements to change what happens!
+
+Let's set a variable called '$gold' to 5.
+
+&lt;&lt;set $gold to 5&gt;&gt;
+
+Next, let's run different lines depending on what's stored inside '$gold':
+
+&lt;&lt;if $gold &gt; 5&gt;&gt;
+    The '$gold' variable is bigger than 5!
+&lt;&lt;else&gt;&gt;
+    The '$gold' variable is 5 or less!
+&lt;&lt;endif&gt;&gt;
+
+Finally, we can use the "jump" command to go to a different node! Let's do that now!
+
+[[OtherNode]]</tw-passagedata><tw-passagedata pid="2" name="OtherNode" tags="@file:main" position="900,525" size="100,100">Here we are in a different node! Nodes let you divide up your content into different blocks, which makes it easier to manage.
+
+We're all done! Try changing the text in the editor to the left, and clicking Test again!</tw-passagedata><tw-passagedata pid="3" name="Program" tags="@file:Variables" position="1100,300" size="100,100">/// Ship.yarn, node Ship, line 14
+&lt;&lt;declare $should_see_ship = false&gt;&gt;
+
+/// Ship.yarn, node Ship, line 14
+&lt;&lt;declare $sally_warning = false&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Ship" tags="@file:Ship" position="1100,425" size="100,100">&lt;&lt;if visited("Ship") is false&gt;&gt;
+    Ship: Hey, friend.  #line:5837f2
+    Player: Hi, Ship. #line:ship09
+    Player: How's space? #line:ship10
+    Ship: Oh, man. #line:ship11
+    &lt;&lt;setsprite ShipFace happy&gt;&gt;
+    Ship: It's HUGE! #line:ship12
+    &lt;&lt;setsprite ShipFace neutral&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;setsprite ShipFace happy&gt;&gt;
+    Ship: Hey!! #line:ship13
+    &lt;&lt;setsprite ShipFace neutral&gt;&gt;
+&lt;&lt;endif&gt;&gt;
+
+&lt;&lt;if $should_see_ship is true and $sally_warning is false&gt;&gt;
+    Player: Sally said you wanted to see me? #line:ship01
+    &lt;&lt;setsprite ShipFace happy&gt;&gt; 
+    Ship: She totally did!! #line:ship03
+    &lt;&lt;setsprite ShipFace neutral&gt;&gt; 
+    Ship: She wanted me to tell you... #line:ship04
+    Ship: If you ever go off-watch without resetting the console again... #line:ship05
+    &lt;&lt;setsprite ShipFace happy&gt;&gt;
+    Ship: She'll flay you alive! #line:ship06
+    &lt;&lt;set $sally_warning to true&gt;&gt;
+    &lt;&lt;wait 1&gt;&gt;
+    Player: Uh. #line:ship07
+    &lt;&lt;setsprite ShipFace neutral&gt;&gt;
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Sally" tags="@file:Sally" position="1225,425" size="100,100">&lt;&lt;if visited("Sally") is false&gt;&gt;
+    Player: Hey, Sally. #line:794945
+    Sally: Uah! #line:2dc39b
+    Sally: You snuck up on me. #line:34de2f
+    Sally: Don't do that. #line:dcc2bc
+&lt;&lt;else&gt;&gt;
+    Player: Hey. #line:a8e70c
+    Sally: Hi. #line:305cde
+&lt;&lt;endif&gt;&gt;
+
+
+-&gt; Anything exciting happen on your watch? &lt;&lt;if not visited("Sally_Watch")&gt;&gt; #line:5d7a7c
+    [[Sally_Watch]]
+-&gt; Sorry about the console. &lt;&lt;if $sally_warning and not visited("Sally_Sorry")&gt;&gt; #line:0a7e39
+    [[Sally_Sorry]]
+-&gt; See you later. #line:0facf7
+    [[Sally_Exit]]</tw-passagedata><tw-passagedata pid="6" name="Sally_Watch" tags="@file:Sally" position="1225,550" size="100,100">Sally: Not really.  #line:8c3f98
+Sally: Same old nebula, doing the same old thing. #line:24c418
+Sally: Oh, Ship wanted to see you. Go say hi to it. #line:df4eaf
+&lt;&lt;set $should_see_ship to true&gt;&gt;
+&lt;&lt;if visited("Ship") is true&gt;&gt;
+    Player: Already done! #line:1fea6c
+    Sally: Go say hi again. #line:5df323
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Sally_Sorry" tags="@file:Sally" position="1350,550" size="100,100">Sally: Yeah. Don't do it again. #line:d7df49</tw-passagedata><tw-passagedata pid="8" name="Sally_Exit" tags="@file:Sally" position="1100,550" size="100,100">Sally: Bye. #line:60c282</tw-passagedata></tw-storydata>
